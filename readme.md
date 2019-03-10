@@ -23,4 +23,4 @@ In order to avoid including the source code for yarngdx, I am pulling it in as a
 
 note: With yarn, you have the option of exporting to json or yarn.txt files - both can be loaded by yarngdx, but yarn.txt is a lot more human readable - it looks a lot like yaml.
 
-Watch out for windows CR+LF line endings if you are manipulating yarn.txt files on windows - saving with CR+LF will make it so yarngdx won't be able to read the files. Keep that in mind - it's pretty easy to save text files with unix (LF) line endings on windows if your text editor supports it. Git can convert the line endings to CR+LF.
+Watch out for windows CR+LF line endings if you are manipulating yarn.txt files on windows - saving with CR+LF will make it so yarngdx won't be able to read the files - to avoid issues, save yarn.txt files with LF/unix style line endings. I use [notepad2](http://www.flos-freeware.ch/notepad2.html) and there's a line ending option to quickly convert CR+LF to LF.
