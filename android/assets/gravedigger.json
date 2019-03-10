@@ -1,0 +1,12 @@
+[
+	{
+		"title": "Gravedigger",
+		"tags": "",
+		"body": "<<if visited(\"Gravedigger\") is false>>\r\n    <<setSprite GravediggerExpression happy>>\r\n        Well well well\r\n    <<setSprite GravediggerExpression neutral>>\r\n        A visitor!!!\r\n<<else>>\r\n    <<setSprite GravediggerExpression happy>>\r\n        Good to see you again!\r\n    <<setsprite GravediggerExpression neutral>>\r\n        Glad you came back!\r\n<<endif>>\r\n<<if $has_shovel is false>>\r\n    Do you know where I can get a shovel?\r\n    I sure would like to dig here\r\n    There are supposed to be diamonds here.\r\n<<endif>>\r\n<<if $has_shovel is true>>\r\n    <<setSprite GravediggerExpression happy>>\r\n        Say, that's a nice shovel!\r\n    <<setSprite GravediggerExpression neutral>>\r\n        Well, let's do some digging...\r\n    <<setSprite GravediggerExpression happy>>\r\n        Well whaat have we here???\r\n    <<setSprite GravediggerExpression neutral>>\r\n        A diamond!\r\n    <<setSprite GravediggerExpression happy>>\r\n        I'd say you deserve a reward.\r\n    <<set $has_diamond to true>>\r\n    <<setSprite GravediggerExpression diamond>>\r\n        It's yours!\r\n<<endif>>\r\n<<selectCharacter()>>\r\n",
+		"position": {
+			"x": -411,
+			"y": 529
+		},
+		"colorID": 2
+	}
+]

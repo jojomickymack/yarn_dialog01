@@ -1,0 +1,38 @@
+title: Gravedigger
+tags: 
+colorID: 2
+position: -411,529
+---
+<<if visited("Gravedigger") is false>>
+    <<setSprite GravediggerExpression happy>>
+        Well well well
+    <<setSprite GravediggerExpression neutral>>
+        A visitor!!!
+<<else>>
+    <<setSprite GravediggerExpression happy>>
+        Good to see you again!
+    <<setsprite GravediggerExpression neutral>>
+        Glad you came back!
+<<endif>>
+<<if $has_shovel is false>>
+    Do you know where I can get a shovel?
+    I sure would like to dig here
+    There are supposed to be diamonds here.
+<<endif>>
+<<if $has_shovel is true>>
+    <<setSprite GravediggerExpression happy>>
+        Say, that's a nice shovel!
+    <<setSprite GravediggerExpression neutral>>
+        Well, let's do some digging...
+    <<setSprite GravediggerExpression happy>>
+        Well whaat have we here???
+    <<setSprite GravediggerExpression neutral>>
+        A diamond!
+    <<setSprite GravediggerExpression happy>>
+        I'd say you deserve a reward.
+    <<set $has_diamond to true>>
+    <<setSprite GravediggerExpression diamond>>
+        It's yours!
+<<endif>>
+<<selectCharacter()>>
+===

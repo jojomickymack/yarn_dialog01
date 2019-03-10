@@ -1,0 +1,52 @@
+[
+	{
+		"title": "Damsel",
+		"tags": "",
+		"body": "<<if visited(\"Damsel\") is false>>\n    <<setDamselAnimation(\"talk_normal\")>>\n        Well hello there!\n    <<setDamselAnimation(\"talk_intrigued\")>>\n        You look like an intelligent chap!\n<<else>>\n    <<setDamselAnimation(\"talk_normal\")>>\n        Hello again sir\n    <<setDamselAnimation(\"talk_intrigued\")>>\n        Nice to see that you're sensible\n<<endif>>\n[[Damsel.SellItem]]\n",
+		"position": {
+			"x": 640,
+			"y": 1148
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Damsel.GetShovel",
+		"tags": "",
+		"body": "<<setDamselAnimation(\"talk_normal\")>>\nWell here you go sir, one shovel!\n<<set $has_shovel to true>>\n<<setDamselAnimation(\"static_shovel\")>>\n<<selectCharacter()>>\n",
+		"position": {
+			"x": 944,
+			"y": 1721
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Damsel.Exit",
+		"tags": "",
+		"body": "See you later, chap!\n<<setDamselAnimation(\"static_normal\")>>\n<<selectCharacter()>>\n",
+		"position": {
+			"x": 253,
+			"y": 1720
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Damsel.Mean",
+		"tags": "",
+		"body": "<<setDamselAnimation(\"talk_disgusted\")>>\nGrrr! Don't be mean!\nI am not sure why you are rude...\n<<setDamselAnimation(\"static_angry\")>>\n<<selectCharacter()>>\n",
+		"position": {
+			"x": 529,
+			"y": 1727
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Damsel.SellItem",
+		"tags": "",
+		"body": "<<if visited(\"Gravedigger\") is true>>\n    <<setDamselAnimation(\"talk_disgusted\")>>\n    That ghoul you were talking to! Eugh!\n    You need to keep better company!\n<<endif>>\n<<setDamselAnimation(\"talk_normal\")>>\nWould you like to buy a shovel?\n[[Yes, I would love to have a shovel!|Damsel.GetShovel]]\n[[Not interested|Damsel.Mean]]\n[[Well, I might come back later.|Damsel.Exit]]\n",
+		"position": {
+			"x": 335,
+			"y": 1344
+		},
+		"colorID": 0
+	}
+]

@@ -1,0 +1,65 @@
+title: Damsel
+tags: 
+colorID: 0
+position: 640,1148
+---
+<<if visited("Damsel") is false>>
+    <<setDamselAnimation("talk_normal")>>
+        Well hello there!
+    <<setDamselAnimation("talk_intrigued")>>
+        You look like an intelligent chap!
+<<else>>
+    <<setDamselAnimation("talk_normal")>>
+        Hello again sir
+    <<setDamselAnimation("talk_intrigued")>>
+        Nice to see that you're sensible
+<<endif>>
+[[Damsel.SellItem]]
+===
+title: Damsel.GetShovel
+tags: 
+colorID: 0
+position: 944,1721
+---
+<<setDamselAnimation("talk_normal")>>
+Well here you go sir, one shovel!
+<<set $has_shovel to true>>
+<<setDamselAnimation("static_shovel")>>
+<<selectCharacter()>>
+===
+title: Damsel.Exit
+tags: 
+colorID: 0
+position: 253,1720
+---
+See you later, chap!
+<<setDamselAnimation("static_normal")>>
+<<selectCharacter()>>
+===
+title: Damsel.Mean
+tags: 
+colorID: 0
+position: 529,1727
+---
+<<setDamselAnimation("talk_disgusted")>>
+Grrr! Don't be mean!
+I am not sure why you are rude...
+<<setDamselAnimation("static_angry")>>
+<<selectCharacter()>>
+===
+title: Damsel.SellItem
+tags: 
+colorID: 0
+position: 335,1344
+---
+<<if visited("Gravedigger") is true>>
+    <<setDamselAnimation("talk_disgusted")>>
+    That ghoul you were talking to! Eugh!
+    You need to keep better company!
+<<endif>>
+<<setDamselAnimation("talk_normal")>>
+Would you like to buy a shovel?
+[[Yes, I would love to have a shovel!|Damsel.GetShovel]]
+[[Not interested|Damsel.Mean]]
+[[Well, I might come back later.|Damsel.Exit]]
+===
