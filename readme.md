@@ -2,6 +2,8 @@
 
 [YarnGdx](https://github.com/kyperbelt/YarnGdx) is an interpreter for the [yarn language](https://github.com/InfiniteAmmoInc/Yarn), which is used for creating dialog trees. What you get with Yarn is an editor for creating 'nodes', which contain little scripts. The scripts can contain lines of dialog and special directives that can be used for simple if/else logic, jumping to other nodes, or changing the game state through custom 'functions' or 'commands'.
 
+![dialog.gif](.github/dialog.gif?raw=true)
+
 What this does for you is provide you with a visual scripting medium to create your dialogs. It also provides a way to separate the script content from your game logic (you have the choice between json and yarn.txt files).
 
 In your game, you will have to monitor the current state of the dialog tree as the variables below change as you step through the dialog - 
