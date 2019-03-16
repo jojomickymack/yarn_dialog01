@@ -38,5 +38,5 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-    implementation 'com.github.jojomickymack:yarnjava:v1.0'
+    implementation 'com.github.jojomickymack:yarnjava:master-SNAPSHOT'
 }

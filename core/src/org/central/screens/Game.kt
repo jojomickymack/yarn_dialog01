@@ -8,7 +8,7 @@ import org.central.App
 import org.central.AppObj
 import org.central.dialog.TypewriterAct
 import com.kyper.yarn.Dialogue
-import com.kyper.yarn.UserData
+import com.kyper.yarn.DialogueData
 import ktx.actors.plusAssign
 import ktx.app.KtxScreen
 import org.central.dialog.DialogBox
@@ -17,7 +17,7 @@ import org.central.dialog.DialogState
 
 class Game(val application: App) : KtxScreen {
 
-	private var variables = UserData("")
+	private var variables = DialogueData("")
     private var dialog = Dialogue(variables)
     private val ds = DialogState(dialog)
 
