@@ -199,4 +199,10 @@ class Game(val application: App) : KtxScreen {
             }
         }
     }
+
+    override fun dispose() {
+        GameObj.dispose()
+        println("all disposable memory freed")
+        super.dispose()
+    }
 }

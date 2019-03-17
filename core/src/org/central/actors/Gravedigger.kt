@@ -16,7 +16,8 @@ class Gravedigger: Actor() {
         height = 140f
     }
 
-    var tex = TextureRegion(Texture(Gdx.files.internal("gravedigger.png")))
+    val gravediggerTex = Texture(Gdx.files.internal("gravedigger.png"))
+    var tex = TextureRegion(gravediggerTex)
     val regions: Array<TextureRegion> = tex.split(200, 200)[0]
     var sheetTex = mutableMapOf("neutral" to regions[0],
             "happy" to regions[1],
@@ -27,5 +28,9 @@ class Gravedigger: Actor() {
 
     override fun draw(batch: Batch, parentAlpha: Float) {
         batch.draw(currentTex, xpos, AppObj.stg.height - height - 10, width, height)
+    }
+
+    fun dispose() {
+        gravediggerTex.dispose()
     }
 }

@@ -52,4 +52,17 @@ object AppObj {
         skin.getFont("carbontype").data.setScale(0.5f)
         Scene2DSkin.defaultSkin = this.skin
     }
+
+    fun dispose() {
+        this.sb.dispose()
+        this.stg.dispose()
+        this.hudSb.dispose()
+        this.hudStg.dispose()
+        this.dialogSb.dispose()
+        this.dialogStg.dispose()
+        this.osc.dispose()
+        this.sr.dispose()
+        this.dialogSnd.dispose()
+        this.skin.dispose()
+    }
 }

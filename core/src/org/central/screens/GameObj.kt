@@ -18,4 +18,9 @@ object GameObj {
     init {
 
     }
+
+    fun dispose() {
+        gravedigger.dispose()
+        damsel.dispose()
+    }
 }

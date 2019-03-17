@@ -11,7 +11,8 @@ import org.central.AppObj
 
 class Damsel: Actor() {
     val xpos = AppObj.stg.width - 160f
-    var tex = TextureRegion(Texture(Gdx.files.internal("damsel.png")))
+    val damselTex = Texture(Gdx.files.internal("damsel.png"))
+    var tex = TextureRegion(damselTex)
     val regions = tex.split(200, 200)[0]
 
     var animations = mutableMapOf("static_normal" to Animation(0f, regions[0]),
@@ -47,5 +48,9 @@ class Damsel: Actor() {
 
     override fun draw(batch: Batch, parentAlpha: Float) {
         batch.draw(currentAnimation?.getKeyFrame(this.stateTime, true), xpos, AppObj.stg.height - height - 10, width, height)
+    }
+
+    fun dispose() {
+        damselTex.dispose()
     }
 }

@@ -14,4 +14,10 @@ class App : KtxGame<Screen>() {
         addScreen(game)
         setScreen<Game>()
     }
+
+    override fun dispose() {
+        AppObj.dispose()
+        println("all disposable memory freed")
+        super.dispose()
+    }
 }
