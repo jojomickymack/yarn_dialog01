@@ -11,11 +11,6 @@ import org.central.AppObj
 
 class Damsel: Actor() {
     val xpos = AppObj.stg.width - 160f
-
-/*
-    .getKeyFrame(physics.stateTime, true)
- */
-
     var tex = TextureRegion(Texture(Gdx.files.internal("damsel.png")))
     val regions = tex.split(200, 200)[0]
 
